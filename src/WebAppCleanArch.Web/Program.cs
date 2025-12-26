@@ -1,25 +1,14 @@
-using WebAppCleanArch.Application.Students;
-using WebAppCleanArch.Domain.Interfaces;
-using WebAppCleanArch.Application.Courses;
-using WebAppCleanArch.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using WebAppCleanArch.Infrastructure;
+using WebAppCleanArch.Infrastructure.Persistence;
 using WebAppCleanArch.Infrastructure.Persistence.Context;
+
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddScoped<StudentService>();
-builder.Services.AddScoped<IStudentRepository, StudentRepository>();
-
-builder.Services.AddScoped<CourseService>();
-builder.Services.AddScoped<ICourseRepository, CourseRepository>();
+builder.Services.AddInfrastructure(builder.Configuration);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(
-        builder.Configuration.GetConnectionString("DefaultConnection")
-    )
-);
 
 var app = builder.Build();
 
@@ -41,5 +30,11 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    await ApplicationDbInitializer.InitializeAsync(context);
+}
 
 app.Run();

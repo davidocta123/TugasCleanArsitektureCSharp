@@ -1,4 +1,3 @@
-using System.Reflection.Metadata;
 using WebAppCleanArch.Domain.Entities;
 
 namespace WebAppCleanArch.Domain.Seeds;
@@ -7,19 +6,12 @@ public static class CourseSeed
 {
     public static List<Course> Courses()
     {
-        List<Course> courses = new List<Course>();
-        
-        var course = new Course
+        return new List<Course>
         {
-            CourseName = "Mathematics",
-            StudentId = 1
-            
+            new Course
+            {
+                CourseName = "Mathematics"
+            }
         };
-        
-        
-        courses.Add(course);
-
-        return courses;
     }
 }
-    

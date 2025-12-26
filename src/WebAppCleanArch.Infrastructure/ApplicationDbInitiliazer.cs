@@ -1,53 +1,44 @@
 using WebAppCleanArch.Domain.Seeds;
 using WebAppCleanArch.Infrastructure.Persistence.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebAppCleanArch.Infrastructure.Persistence;
 
-public class ApplicationDbInitializer
+public static class ApplicationDbInitializer
 {
-    public static void Initialize(ApplicationDbContext context)
+    public static async Task InitializeAsync(ApplicationDbContext context)
     {
-        var initializer = new ApplicationDbInitializer();
-        initializer.SeedAsync(context).GetAwaiter().GetResult();
+        await context.Database.MigrateAsync();
+
+        await SeedStudentsAsync(context);
+        await SeedCoursesAsync(context);
     }
 
-    private async Task SeedAsync(ApplicationDbContext context)
+    private static async Task SeedStudentsAsync(ApplicationDbContext context)
     {
-        context.Database.EnsureCreated();
+        if (await context.Students.AnyAsync())
+            return;
 
-        await SeedStudentAsync(context);
-        await SeedCourseAsync(context);
-    }
-
-
-
-    private async Task SeedStudentAsync(ApplicationDbContext context)
-    {
         var students = StudentSeed.Students();
 
-        foreach (var item in students)
-        {
-            var student = await context.Students.FindAsync(item.Id);
-            if (student == null)
-            {
-                context.Students.Add(entity: item);
-                await context.SaveChangesAsync();
-            }
-        }
+        context.Students.AddRange(students);
+        await context.SaveChangesAsync();
     }
 
-    private async Task SeedCourseAsync(ApplicationDbContext context)
+    private static async Task SeedCoursesAsync(ApplicationDbContext context)
     {
+        if (await context.Courses.AnyAsync())
+            return;
+
+        var student = await context.Students.FirstAsync();
         var courses = CourseSeed.Courses();
 
-        foreach (var item in courses)
+        foreach (var course in courses)
         {
-            var course = await context.Courses.FindAsync(item.Id);
-            if (course == null)
-            {
-                context.Courses.Add(entity: item);
-                await context.SaveChangesAsync();
-            }
+            course.StudentId = student.Id; // 🔥 HUBUNGKAN FK
         }
+
+        context.Courses.AddRange(courses);
+        await context.SaveChangesAsync();
     }
 }
