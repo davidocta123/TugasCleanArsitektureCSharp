@@ -2,10 +2,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WebAppCleanArch.Infrastructure\WebAppCleanArch.Infrastructure.csproj" />
+    <ProjectReference Include="..\WebAppCleanArch.Domain\WebAppCleanArch.Domain.csproj" />
+    <ProjectReference Include="..\WebAppCleanArch.Application\WebAppCleanArch.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.22">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>

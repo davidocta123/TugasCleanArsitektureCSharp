@@ -2,6 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WebAppCleanArch.Domain.Entities;
 
+
 public class Student
 {
     [Key]

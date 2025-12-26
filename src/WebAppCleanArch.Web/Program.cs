@@ -1,7 +1,25 @@
+using WebAppCleanArch.Application.Students;
+using WebAppCleanArch.Domain.Interfaces;
+using WebAppCleanArch.Application.Courses;
+using WebAppCleanArch.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
+using WebAppCleanArch.Infrastructure.Persistence.Context;
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<StudentService>();
+builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+
+builder.Services.AddScoped<CourseService>();
+builder.Services.AddScoped<ICourseRepository, CourseRepository>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection")
+    )
+);
 
 var app = builder.Build();
 

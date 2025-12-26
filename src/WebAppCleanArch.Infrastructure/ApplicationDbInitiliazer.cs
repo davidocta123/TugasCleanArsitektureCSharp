@@ -16,7 +16,10 @@ public class ApplicationDbInitializer
         context.Database.EnsureCreated();
 
         await SeedStudentAsync(context);
+        await SeedCourseAsync(context);
     }
+
+
 
     private async Task SeedStudentAsync(ApplicationDbContext context)
     {
@@ -28,6 +31,21 @@ public class ApplicationDbInitializer
             if (student == null)
             {
                 context.Students.Add(entity: item);
+                await context.SaveChangesAsync();
+            }
+        }
+    }
+
+    private async Task SeedCourseAsync(ApplicationDbContext context)
+    {
+        var courses = CourseSeed.Courses();
+
+        foreach (var item in courses)
+        {
+            var course = await context.Courses.FindAsync(item.Id);
+            if (course == null)
+            {
+                context.Courses.Add(entity: item);
                 await context.SaveChangesAsync();
             }
         }

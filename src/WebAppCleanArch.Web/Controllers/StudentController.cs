@@ -25,7 +25,7 @@ public class StudentController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create(Student student)
     {
-        if (!ModelState.IsValid)
+        if (ModelState.IsValid)
             return View(student);
 
         await _studentService.CreateAsync(student);
@@ -45,7 +45,7 @@ public class StudentController : Controller
     public async Task<IActionResult> Edit(int id, Student student)
     {
         if (id != student.Id) return NotFound();
-        if (!ModelState.IsValid) return View(student);
+        if (ModelState.IsValid) return View(student);
 
         await _studentService.UpdateAsync(student);
         return RedirectToAction(nameof(Index));

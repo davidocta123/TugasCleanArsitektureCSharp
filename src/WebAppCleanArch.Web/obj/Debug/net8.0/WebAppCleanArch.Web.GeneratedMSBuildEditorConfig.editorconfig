@@ -18,6 +18,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\BIU MATKUL SEMESTER 8\Paradaya\WebAppCleanArch\src\WebAppCleanArch.Web
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/BIU MATKUL SEMESTER 8/Paradaya/WebAppCleanArch/src/WebAppCleanArch.Web/Views/Course/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BIU MATKUL SEMESTER 8/Paradaya/WebAppCleanArch/src/WebAppCleanArch.Web/Views/Course/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BIU MATKUL SEMESTER 8/Paradaya/WebAppCleanArch/src/WebAppCleanArch.Web/Views/Course/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BIU MATKUL SEMESTER 8/Paradaya/WebAppCleanArch/src/WebAppCleanArch.Web/Views/Course/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BIU MATKUL SEMESTER 8/Paradaya/WebAppCleanArch/src/WebAppCleanArch.Web/Views/Course/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/BIU MATKUL SEMESTER 8/Paradaya/WebAppCleanArch/src/WebAppCleanArch.Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -30,8 +50,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/BIU MATKUL SEMESTER 8/Paradaya/WebAppCleanArch/src/WebAppCleanArch.Web/Views/Shared/_NavigationMenu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZpZ2F0aW9uTWVudS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/BIU MATKUL SEMESTER 8/Paradaya/WebAppCleanArch/src/WebAppCleanArch.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BIU MATKUL SEMESTER 8/Paradaya/WebAppCleanArch/src/WebAppCleanArch.Web/Views/Student/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BIU MATKUL SEMESTER 8/Paradaya/WebAppCleanArch/src/WebAppCleanArch.Web/Views/Student/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BIU MATKUL SEMESTER 8/Paradaya/WebAppCleanArch/src/WebAppCleanArch.Web/Views/Student/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BIU MATKUL SEMESTER 8/Paradaya/WebAppCleanArch/src/WebAppCleanArch.Web/Views/Student/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BIU MATKUL SEMESTER 8/Paradaya/WebAppCleanArch/src/WebAppCleanArch.Web/Views/Student/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/BIU MATKUL SEMESTER 8/Paradaya/WebAppCleanArch/src/WebAppCleanArch.Web/Views/_ViewImports.cshtml]

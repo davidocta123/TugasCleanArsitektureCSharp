@@ -13,3 +13,4 @@ D:\BIU MATKUL SEMESTER 8\Paradaya\WebAppCleanArch\src\WebAppCleanArch.Applicatio
 D:\BIU MATKUL SEMESTER 8\Paradaya\WebAppCleanArch\src\WebAppCleanArch.Application\obj\Debug\net8.0\refint\WebAppCleanArch.Application.dll
 D:\BIU MATKUL SEMESTER 8\Paradaya\WebAppCleanArch\src\WebAppCleanArch.Application\obj\Debug\net8.0\WebAppCleanArch.Application.pdb
 D:\BIU MATKUL SEMESTER 8\Paradaya\WebAppCleanArch\src\WebAppCleanArch.Application\obj\Debug\net8.0\ref\WebAppCleanArch.Application.dll
+D:\BIU MATKUL SEMESTER 8\Paradaya\WebAppCleanArch\src\WebAppCleanArch.Application\obj\Debug\net8.0\WebAppCleanArch.Application.sourcelink.json

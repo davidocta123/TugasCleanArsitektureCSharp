@@ -16,5 +16,20 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
+        modelBuilder.Entity<Student>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+            entity.Property(e => e.Email).IsRequired();
+            entity.Property(e => e.Age);
+        });
+        modelBuilder.Entity<Course>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+            entity.Property(e => e.CourseName).IsRequired().HasMaxLength(100);
+            entity.HasOne(e => e.Student)
+                  .WithMany(s => s.Courses)
+                  .HasForeignKey(e => e.StudentId);
+        });
+
     }
 }

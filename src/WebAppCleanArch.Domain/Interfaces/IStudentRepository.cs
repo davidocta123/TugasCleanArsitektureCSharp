@@ -9,5 +9,6 @@ namespace WebAppCleanArch.Domain.Interfaces
         Task UpdateAsync(Student student);
         Task DeleteAsync(int id);
         Task<bool> ExistsAsync(int id);
+        Task<Student?> GetWithCoursesAsync(int id); // New method to get Student with Courses
     }
 }
